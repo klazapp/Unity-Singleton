@@ -1,11 +1,34 @@
-# Unity Custom Logger Utility
+# Singleton Utility for Unity
 
-This tool represents a solution for centralized logging management across an entire software project. It enhances the script compilation process to integrate log statements seamlessly, ensuring a consistent and standardized approach to logging. Key features include:
+## Introduction
+The `Singleton` utility, part of the `com.Klazapp.Utility` namespace, is a design pattern that ensures a class has only one instance and provides a global point of access to that instance. Singletons are commonly used to manage global state, resources, or services in a Unity project.
 
-1. **Automated Log Integration:** The tool intelligently injects log statements at critical junctures in the codebase during the compilation phase, streamlining the logging process.
+## Features
+- Ensures that there is only one instance of the class within the Unity application.
+- Provides a global point of access to the single instance, allowing other parts of the code to easily interact with it.
+- Allows controlled initialization of the singleton instance, typically in response to the first request for the instance.
 
-2. **Configurable Log Severity Levels:** It offers granular control over log verbosity, allowing developers to adjust logging levels (such as debug, info, warning, and error) globally or for specific modules, tailoring the logging output to the needs of different environments and stages of development.
+## Dependencies
+To use `LogMessage`, certain dependencies are required. Ensure these are included in your Unity project.
+- **Unity Version**: Minimum Unity 2020.3 LTS.
 
-3. **Uniform Log Formatting:** By enforcing a uniform format for all log entries, the tool guarantees consistency in logging outputs. This format can encompass various elements such as timestamps, severity indicators, and contextual data, thereby facilitating easier log analysis and troubleshooting.
+## Compatibility
+| Compatibility        | URP | BRP | HDRP |
+|----------------------|-----|-----|------|
+| Compatible           | ✔️  | ✔️  | ✔️   |
 
-Overall, this tool is designed to optimize logging practices, improve code maintainability, and enhance the monitoring capabilities within a software development environment."
+## Installation
+1. Open the Unity Package Manager (`Window` > `Package Manager`).
+2. Click `+`, select `Add package from git URL...`, and enter `https://github.com/klazapp/Unity-Singleton-Public.git`.
+3. Unity will download and make the package available in your project.
+
+## Usage
+```csharp
+Write Something here
+```
+
+## To-Do List (Future Features)
+- 
+
+## License
+This utility is released under the [MIT License](LICENSE).
