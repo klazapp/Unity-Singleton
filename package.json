@@ -10,4 +10,12 @@
     "data"
   ],
   "category": "Utility"
+    "author": {
+      "name": "Klazapp",
+      "email": "klazapp@klazapp.com",
+      "url": "https://www.klazapp.com"
+    },
+    "documentationUrl": "https://github.com/klazapp/Unity-Singleton-Public",
+    "changelogUrl": "https://github.com/klazapp/Unity-Singleton-Public",
+    "licensesUrl": "https://github.com/klazapp/Unity-Singleton-Public"
 }
