@@ -9,7 +9,7 @@ The `Singleton` utility, part of the `com.Klazapp.Utility` namespace, is a desig
 - Allows controlled initialization of the singleton instance, typically in response to the first request for the instance.
 
 ## Dependencies
-To use `LogMessage`, certain dependencies are required. Ensure these are included in your Unity project.
+To use `Singleton`, certain dependencies are required. Ensure these are included in your Unity project.
 - **Unity Version**: Minimum Unity 2020.3 LTS.
 
 ## Compatibility
