@@ -1,34 +1,53 @@
-# Singleton Utility for Unity
+# Singleton Patterns for Unity
 
 ## Introduction
-The `Singleton` utility, part of the `com.Klazapp.Utility` namespace, is a design pattern that ensures a class has only one instance and provides a global point of access to that instance. Singletons are commonly used to manage global state, resources, or services in a Unity project.
+
+The Singleton package under the `com.Klazapp.Utility` namespace provides robust implementations of the Singleton pattern for Unity, including both a persistent and a standard version. These classes ensure that only one instance of a component exists throughout the lifecycle of the application, with the persistent variant also surviving across different scenes.
 
 ## Features
-- Ensures that there is only one instance of the class within the Unity application.
-- Provides a global point of access to the single instance, allowing other parts of the code to easily interact with it.
-- Allows controlled initialization of the singleton instance, typically in response to the first request for the instance.
+
+- **MonoSingletonGlobal**: Standard singleton implementation that ensures only one instance of a component exists within the application.
+- **MonoPersistentSingletonGlobal**: Extends the standard singleton pattern to make the instance persist across multiple scenes without being destroyed.
+- **Automatic Instance Creation**: Automatically creates a new instance of the singleton object if one does not already exist.
+- **Simple Integration**: Easily integrate with any Unity project to manage singleton instances of various components.
 
 ## Dependencies
-To use `Singleton`, certain dependencies are required. Ensure these are included in your Unity project.
-- **Unity Version**: Minimum Unity 2020.3 LTS.
+
+- **Unity 2017.1 or Newer**: Required for the latest MonoBehaviour and GameObject API features.
 
 ## Compatibility
-| Compatibility        | URP | BRP | HDRP |
-|----------------------|-----|-----|------|
-| Compatible           | ✔️  | ✔️  | ✔️   |
+
+Designed to work universally across all Unity projects, regardless of the rendering pipeline or platform.
+
+| Compatibility | URP | BRP | HDRP |
+|---------------|-----|-----|------|
+| Compatible    | ✔️   | ✔️   | ✔️    |
 
 ## Installation
-1. Open the Unity Package Manager (`Window` > `Package Manager`).
-2. Click `+`, select `Add package from git URL...`, and enter `https://github.com/klazapp/Unity-Singleton-Public.git`.
-3. Unity will download and make the package available in your project.
+
+1. Download the Singleton package scripts from the [GitHub repository](https://github.com/klazapp/Unity-Singleton-Public.git) or via the Unity Package Manager.
+2. Add the scripts to your Unity project within any scripts directory.
 
 ## Usage
+
+To utilize the singleton pattern, inherit your class from `MonoSingletonGlobal<T>` or `MonoPersistentSingletonGlobal<T>` where `T` is your component class. Access your singleton instance via `Instance` property:
+
 ```csharp
-Write Something here
+public class GameManager : MonoSingletonGlobal<GameManager>
+{
+    void Start()
+    {
+        // Use the instance
+        Debug.Log("GameManager started");
+    }
+}
 ```
 
 ## To-Do List (Future Features)
-- 
+
+- [ ] Implement thread-safe initialization to enhance reliability in multi-threaded scenarios.
+- [ ] Expand the utility to include non-MonoBehaviour singletons for broader use cases.
 
 ## License
-This utility is released under the [MIT License](LICENSE).
+
+This utility is released under the MIT License, permitting free use, modification, and distribution within your projects.
